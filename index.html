@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="SunRay IT – Premium supplier of refurbished enterprise hardware: server CPUs, RAM, SSDs, motherboards. Quality tested, bulk discounts, worldwide shipping.">
+    <meta name="keywords" content="refurbished servers, used Xeon, recycled IT hardware, wholesale electronics, second hand enterprise components">
+    <title>SunRay IT | Refurbished Hardware</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1e293b;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eef2ff;
+        }
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0f172a, #2563eb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .logo span {
+            color: #2563eb;
+            background: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+        .lang-switch {
+            background: #f1f5f9;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.8rem;
+            margin-left: 1rem;
+            transition: all 0.2s;
+        }
+        .lang-switch:hover {
+            background: #e2e8f0;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37,99,235,0.2);
+        }
+        .btn-outline {
+            border: 1px solid #2563eb;
+            background: transparent;
+            color: #2563eb;
+            padding: 0.6rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .hero {
+            padding: 5rem 0 6rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-bottom: 1px solid #eef2ff;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .hero-content {
+            flex: 1;
+        }
+        .hero-badge {
+            background: #eef2ff;
+            color: #1e40af;
+            padding: 0.25rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            color: #0f172a;
+        }
+        .hero-content h1 i {
+            color: #2563eb;
+        }
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .hero-visual {
+            flex: 1;
+            background: #f1f5f9;
+            border-radius: 2rem;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+        .hero-visual i {
+            font-size: 4rem;
+            color: #2563eb;
+            margin: 0 0.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 1.8rem;
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: #2563eb;
+            box-shadow: 0 20px 25px -12px rgba(0,0,0,0.1);
+        }
+        .product-icon {
+            font-size: 2.2rem;
+            color: #2563eb;
+            margin-bottom: 1.2rem;
+        }
+        .product-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+        .product-tag {
+            display: inline-block;
+            background: #eef2ff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #1e40af;
+            margin-top: 1rem;
+        }
+
+        .capabilities {
+            background: #f8fafc;
+            border-top: 1px solid #eef2ff;
+            border-bottom: 1px solid #eef2ff;
+        }
+        .cap-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .cap-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .cap-item i {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        .contact-show {
+            background: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        .contact-method {
+            flex: 1;
+            min-width: 200px;
+            background: #f8fafc;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+        .contact-method i {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 0.8rem;
+        }
+        .contact-method h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-method p {
+            color: #475569;
+            word-break: break-all;
+        }
+        .qr-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 0.5rem;
+            border-radius: 1rem;
+            border: 1px solid #e2e8f0;
+            background: white;
+            padding: 0.5rem;
+        }
+        .contact-note {
+            margin-top: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: #f1f5f9;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+        }
+        .social-links a {
+            color: #64748b;
+            margin: 0 0.8rem;
+            font-size: 1.3rem;
+            transition: 0.2s;
+        }
+        .social-links a:hover {
+            color: #2563eb;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .nav-flex {
+                flex-direction: column;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">SUNRAY <span>IT</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" data-key="nav_home">Home</a></li>
+                <li><a href="#products" data-key="nav_products">Products</a></li>
+                <li><a href="#capabilities" data-key="nav_why">Why Us</a></li>
+                <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                <li><button class="lang-switch" id="langToggle">中文</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge" data-key="hero_badge"><i class="fas fa-microchip"></i> Refurbished · Enterprise Grade</div>
+                <h1><span data-key="hero_title1">Powering Global IT</span> <i class="fas fa-bolt"></i><br><span data-key="hero_title2">with Tested Hardware</span></h1>
+                <p data-key="hero_desc">Massive stock of server CPUs, memory, SSDs, motherboards – all rigorously tested. Wholesale pricing & fast worldwide delivery.</p>
+                <div>
+                    <a href="#products" class="btn-primary" data-key="hero_btn1" style="margin-right: 1rem;">Browse Inventory</a>
+                    <a href="#contact" class="btn-outline" data-key="hero_btn2">Contact Us</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><h3 data-key="stat1_num">50k+</h3><p data-key="stat1_label">Units in stock</p></div>
+                    <div class="stat-item"><h3 data-key="stat2_num">98%</h3><p data-key="stat2_label">Satisfaction</p></div>
+                    <div class="stat-item"><h3 data-key="stat3_num">120+</h3><p data-key="stat3_label">Countries</p></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <i class="fas fa-microchip"></i>
+                <i class="fas fa-memory"></i>
+                <i class="fas fa-hdd"></i>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Intel Xeon · AMD EPYC · Samsung · Hynix · Dell · Supermicro</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title" data-key="products_title">Hot Selling Components</h2>
+            <p class="section-subtitle" data-key="products_sub">Grade A refurbished – fully functional, 90-day warranty</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-microchip"></i></div>
+                    <h3 data-key="prod1_name">Intel Xeon Scalable</h3>
+                    <p data-key="prod1_desc">1st & 2nd Gen, 6138/6148/8160, up to 28 cores. Great for servers.</p>
+                    <div class="product-tag" data-key="prod1_tag">Bulk discount</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-database"></i></div>
+                    <h3 data-key="prod2_name">DDR4 ECC Memory</h3>
+                    <p data-key="prod2_desc">16GB/32GB/64GB – Samsung, Hynix, Micron. 100% tested.</p>
+                    <div class="product-tag" data-key="prod2_tag">Server ready</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 data-key="prod3_name">Enterprise SSDs</h3>
+                    <p data-key="prod3_desc">Samsung PM983 / Intel P4510, high endurance, mixed use.</p>
+                    <div class="product-tag" data-key="prod3_tag">NVMe / SATA</div>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon"><i class="fas fa-server"></i></div>
+                    <h3 data-key="prod4_name">Server Motherboards</h3>
+                    <p data-key="prod4_desc">Supermicro X11, Dell PowerEdge, ASUS WS – tested I/O.</p>
+                    <div class="product-tag" data-key="prod4_tag">C621/C622</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <h2 class="section-title" data-key="why_title">Why Global Buyers Trust SunRay</h2>
+            <p class="section-subtitle" data-key="why_sub">We bridge the gap between e-waste and enterprise value</p>
+            <div class="cap-grid">
+                <div class="cap-item">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3 data-key="cap1_title">Rigorous Testing</h3>
+                    <p data-key="cap1_desc">Burn-in, stress test, functional check – each unit certified.</p>
+                </div>
+                <div class="cap-item">
+                    <i class="fas fa-warehouse"></i>
+                    <h3 data-key="cap2_title">5000m² Facility</h3>
+                    <p data-key="cap2_desc">Massive inventory ready for bulk & mixed pallet orders.</p>
+                </div>
+                <div class="cap-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3 data-key="cap3_title">Global Logistics</h3>
+                    <p data-key="cap3_desc">DHL/FedEx priority, 3-7 days door-to-door, customs support.</p>
+                </div>
+                <div class="cap-item">
+                    <i class="fas fa-handshake"></i>
+                    <h3 data-key="cap4_title">B2B Focused</h3>
+                    <p data-key="cap4_desc">Dedicated account manager + invoice & trade assurance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-key="contact_title">Contact Us</h2>
+            <p class="section-subtitle" data-key="contact_sub">Reach out directly – we're ready to serve you 24/7</p>
+            <div class="contact-show">
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>sales@sunrayit.com</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+86 123 4567 8901</p>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-weixin"></i>
+                        <h3>WeChat</h3>
+                        <!-- 微信二维码图片：请将您的二维码图片放到 static/wechat_qr.png -->
+                        <img src="static/wechat_qr.png" alt="WeChat QR Code" class="qr-img" onerror="this.onerror=null; this.src='https://placehold.co/150x150?text=WeChat+QR'">
+                        <p>Scan to add</p>
+                    </div>
+                </div>
+                <div class="contact-note" data-key="contact_note">
+                    Our team typically responds within 2 hours. Bulk orders welcome.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="margin-top: 1rem;">© 2025 SunRay IT – Refurbished Hardware Specialist</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_products: "Products",
+                nav_why: "Why Us",
+                nav_contact: "Contact",
+                hero_badge: "<i class='fas fa-microchip'></i> Refurbished · Enterprise Grade",
+                hero_title1: "Powering Global IT",
+                hero_title2: "with Tested Hardware",
+                hero_desc: "Massive stock of server CPUs, memory, SSDs, motherboards – all rigorously tested. Wholesale pricing & fast worldwide delivery.",
+                hero_btn1: "Browse Inventory",
+                hero_btn2: "Contact Us",
+                stat1_num: "50k+",
+                stat1_label: "Units in stock",
+                stat2_num: "98%",
+                stat2_label: "Satisfaction",
+                stat3_num: "120+",
+                stat3_label: "Countries",
+                products_title: "Hot Selling Components",
+                products_sub: "Grade A refurbished – fully functional, 90-day warranty",
+                prod1_name: "Intel Xeon Scalable",
+                prod1_desc: "1st & 2nd Gen, 6138/6148/8160, up to 28 cores. Great for servers.",
+                prod1_tag: "Bulk discount",
+                prod2_name: "DDR4 ECC Memory",
+                prod2_desc: "16GB/32GB/64GB – Samsung, Hynix, Micron. 100% tested.",
+                prod2_tag: "Server ready",
+                prod3_name: "Enterprise SSDs",
+                prod3_desc: "Samsung PM983 / Intel P4510, high endurance, mixed use.",
+                prod3_tag: "NVMe / SATA",
+                prod4_name: "Server Motherboards",
+                prod4_desc: "Supermicro X11, Dell PowerEdge, ASUS WS – tested I/O.",
+                prod4_tag: "C621/C622",
+                why_title: "Why Global Buyers Trust SunRay",
+                why_sub: "We bridge the gap between e-waste and enterprise value",
+                cap1_title: "Rigorous Testing",
+                cap1_desc: "Burn-in, stress test, functional check – each unit certified.",
+                cap2_title: "5000m² Facility",
+                cap2_desc: "Massive inventory ready for bulk & mixed pallet orders.",
+                cap3_title: "Global Logistics",
+                cap3_desc: "DHL/FedEx priority, 3-7 days door-to-door, customs support.",
+                cap4_title: "B2B Focused",
+                cap4_desc: "Dedicated account manager + invoice & trade assurance.",
+                contact_title: "Contact Us",
+                contact_sub: "Reach out directly – we're ready to serve you 24/7",
+                contact_note: "Our team typically responds within 2 hours. Bulk orders welcome."
+            },
+            zh: {
+                nav_home: "首页",
+                nav_products: "产品中心",
+                nav_why: "优势",
+                nav_contact: "联系",
+                hero_badge: "<i class='fas fa-microchip'></i> 企业级 · 二手硬件",
+                hero_title1: "为全球IT提供",
+                hero_title2: "高性价比硬件",
+                hero_desc: "大量现货服务器CPU、内存、SSD、主板 – 全部经过严格测试。批发价 & 全球快速发货。",
+                hero_btn1: "浏览库存",
+                hero_btn2: "联系我们",
+                stat1_num: "5万+",
+                stat1_label: "库存件数",
+                stat2_num: "98%",
+                stat2_label: "客户满意",
+                stat3_num: "120+",
+                stat3_label: "服务国家",
+                products_title: "热销产品",
+                products_sub: "A级翻新 – 全功能测试，90天保修",
+                prod1_name: "英特尔至强可扩展",
+                prod1_desc: "一/二代，6138/6148/8160，最高28核，服务器优选。",
+                prod1_tag: "批量折扣",
+                prod2_name: "DDR4 ECC 内存",
+                prod2_desc: "16GB/32GB/64GB – 三星/海力士/镁光，100%测试。",
+                prod2_tag: "服务器专用",
+                prod3_name: "企业级固态硬盘",
+                prod3_desc: "三星PM983 / 英特尔P4510，高耐久，混合负载。",
+                prod3_tag: "NVMe / SATA",
+                prod4_name: "服务器主板",
+                prod4_desc: "超微X11、戴尔PowerEdge、华硕WS – 接口测试。",
+                prod4_tag: "C621/C622",
+                why_title: "全球买家信赖SunRay的理由",
+                why_sub: "我们架起电子废物与企业价值的桥梁",
+                cap1_title: "严格测试",
+                cap1_desc: "老化、压力测试、功能检查 – 每台设备均有报告。",
+                cap2_title: "5000平米仓库",
+                cap2_desc: "海量现货，支持散货/托盘混装订单。",
+                cap3_title: "全球物流",
+                cap3_desc: "DHL/FedEx优先，3-7天门到门，清关协助。",
+                cap4_title: "专注B2B",
+                cap4_desc: "专属客户经理 + 发票及贸易保障。",
+                contact_title: "联系我们",
+                contact_sub: "直接联系 – 7x24小时为您服务",
+                contact_note: "团队通常2小时内回复。欢迎批量订单。"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (t[key] !== undefined) {
+                    el.innerHTML = t[key];
+                }
+            });
+            const toggleBtn = document.getElementById('langToggle');
+            if (toggleBtn) {
+                toggleBtn.innerText = lang === 'en' ? '中文' : 'English';
+            }
+            localStorage.setItem('siteLang', lang);
+        }
+
+        const savedLang = localStorage.getItem('siteLang');
+        if (savedLang === 'zh') {
+            setLanguage('zh');
+        } else {
+            setLanguage('en');
+        }
+
+        document.getElementById('langToggle').addEventListener('click', () => {
+            setLanguage(currentLang === 'en' ? 'zh' : 'en');
+        });
+
+        document.querySelectorAll('.nav-links a, .btn-primary[href^="#"], .btn-outline[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId && targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
